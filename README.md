@@ -1,6 +1,6 @@
 ### Nest MyDiary Server
 
-Simple server built with for learning / teaching purpose
+Server built with for learning / teaching purpose
 
 ### Tech used
 
