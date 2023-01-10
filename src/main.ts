@@ -25,11 +25,7 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config, {
     deepScanRoutes: true,
   });
-  app.useGlobalPipes(
-    new ValidationPipe({
-      whitelist: true,
-    }),
-  );
+  app.useGlobalPipes(new ValidationPipe({ forbidUnknownValues: false }));
   app.enableCors();
   const PORT = process.env.PORT || 3000;
   SwaggerModule.setup('/', app, document, customOptions);
